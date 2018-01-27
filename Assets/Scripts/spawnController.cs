@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class spawnController : MonoBehaviour {
 
-	public GameObject slimePreFab;
-	public GameObject slimePreFab2;
-	public GameObject slimePreFab3;
-	public GameObject slimePreFab4;
+	public GameObject golemPreFab;
 	public float rateSpawn;
 	public float currentTime;
 	private float y;
-	public Transform fundo01;
-	public Transform fundo02;
-	public Transform fundo03;
-	public Transform fundo04;
-	private float x1 = 0.01f;
-	private float y1 = 0.005f;
-	private float z1 = 2;
-	private float z2 = 4;
+	//public Transform fundo01;
+	//public Transform fundo02;
+	//public Transform fundo03;
+	//public Transform fundo04;
+	//private float x1 = 0.01f;
+	//private float y1 = 0.005f;
+	//private float z1 = 2;
+	//private float z2 = 4;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +27,7 @@ public class spawnController : MonoBehaviour {
 		currentTime += Time.deltaTime;
 		if (currentTime >= rateSpawn && moveSlime.morte < 25) {
 			currentTime = 0;
-			y = Random.Range (-4, 2);
+			y = ;
 			GameObject tempPreFab = Instantiate (slimePreFab) as GameObject;
 			tempPreFab.transform.position = new Vector3 (transform.position.x, y, tempPreFab.transform.position.z);
 			fundo01.transform.position = new Vector3 (x1, y1, z1);
